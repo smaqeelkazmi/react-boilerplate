@@ -5,15 +5,15 @@ instead of struggling with setting up directory structures,
 It also comes up some basic usable ReactJS packages like
 `redux`, `react-redux`, `axios`, `loadable` etc.
 
-We are still working on it to provide better application structural design
-to make your app more scalable and efficient.
+Contribute to provide better application structural design
+to make app more scalable and efficient for developers.
 
 ### Directory Structure
 
 This app has been bootstrapped using **create-react-app**
 So, all of working envirnoment lies in `src` folder
 
-And here is the structure of the app how we have managed this:
+And here is the structure of the app how it has been designed:
 
 #### routes.js
 
@@ -42,4 +42,4 @@ is to put all of your React Lifecycles, API Based Handling and other data compil
 
 
 
-**Thanks and Cheers :)**
+**Cheers :)**
