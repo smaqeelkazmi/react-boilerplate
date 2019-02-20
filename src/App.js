@@ -1,18 +1,28 @@
 import React, {
     Component
 } from 'react';
-// import logo from './logo.svg';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
 
-import DefaultLayout from "./views/_layout/DefaultLayout";
+import { HashRouter, Route, Switch } from 'react-router-dom';
+import routes from "./routes";
+
+import './App.css';
 
 class App extends Component {
     render() {
         return ( 
             <HashRouter>
                 <Switch>
-                    <Route path="/" name="Home" component={DefaultLayout} />
+                    {routes.map((route, idx) => {
+                        return route.component ? (
+                            <Route key={idx}
+                                    path={route.path}
+                                    exact={route.exact}
+                                    name={route.name}
+                                    render={props => <route.component {...props} />}
+                            />
+                        ) : (null);
+                    },
+                    )}
                 </Switch>
             </HashRouter>
         );

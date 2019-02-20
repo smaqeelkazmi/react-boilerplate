@@ -20,8 +20,8 @@ const Home = Loadable({
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
-    { path: '/', exact: true, name: 'Index', component: IndexPage, inHeader: true, hasNoHeader: false, hasNoFooter: false },
-    { path: '/home', name: 'Home', component: Home, inHeader: true, hasNoHeader: false, hasNoFooter: true }
+    { path: '/', exact: true, name: 'Index', component: IndexPage, inHeader: true },
+    { path: '/home', name: 'Home', component: Home, inHeader: true }
 ];
 
 export default routes;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import store from '../redux/store';
+import MasterLayout from '../views/_layout/MasterLayout';
 
 function mapStateToProps(state) {
     return {
@@ -16,9 +17,9 @@ class index extends Component {
 
     render() {
         return (
-            <div>
+            <MasterLayout>
                 IndexPage
-            </div>
+            </MasterLayout>
         );
     }
 }

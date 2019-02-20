@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import MasterLayout from './_layout/MasterLayout';
+
+import Button from "./_stateless/Button";
 
 const Home = () => {
     return (
-        <div>
-            This is home view
-        </div>
+        <MasterLayout>
+            This is Home page view
+            <Button>This is from button component</Button>
+        </MasterLayout>
     );
 };
 
