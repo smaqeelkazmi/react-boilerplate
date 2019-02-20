@@ -36,7 +36,9 @@ And here is the structure of the app how we have managed this:
 
 
 
-> **The best practice :** is to put all of your React Lifecycles, API Based Handling and other data compiletion in the `statefull components` which should be presented in `services/*` directory and use these componest with `loadable` in `routes.js` file where all of your routes are listed and use the `View Components`and pass the compiled data to the `View Components` which should be `stateless` and presented in `views/*` directory. While all of reusable `components` which will be `stateless` as well should be placed in `views/_stateless/*` directory. And all reusable function like helper functions should be written in `utils` directory.
+### The best practice 
+
+is to put all of your React Lifecycles, API Based Handling and other data compiletion in the `statefull components` which should be presented in `services/*` directory and use these componest with `loadable` in `routes.js` file where all of your routes are listed and use the `View Components`and pass the compiled data to the `View Components` which should be `stateless` and presented in `views/*` directory. While all of reusable `components` which will be `stateless` as well should be placed in `views/_stateless/*` directory. And all reusable function like helper functions should be written in `utils` directory.
 
 
 
