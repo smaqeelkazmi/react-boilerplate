@@ -7,7 +7,7 @@ class MasterLayout extends Component {
     render() {
         return (
             <div>
-                <DefaultHeader title="Hello header" />
+                <DefaultHeader title="ReactStarterKit" />
                 {this.props.children}
                 <DefaultFooter />
             </div>

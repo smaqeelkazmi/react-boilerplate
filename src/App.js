@@ -5,6 +5,7 @@ import React, {
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import routes from "./routes";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends Component {

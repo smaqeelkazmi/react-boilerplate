@@ -3,9 +3,11 @@ import React from 'react';
 const DefaultFooter = () => {
     return (
         <div>
-            <br/><br/>
             <hr/>
-            I'm footer
+            <p className='text-center'>
+                {`React Starter Kit with Bootstrap 4 
+                Enjoy Coding with ReactJS ;)`}
+            </p>
         </div>
     );
 };

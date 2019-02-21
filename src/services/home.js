@@ -16,9 +16,15 @@ class home extends Component {
     }
 
     render() {
+        const subTitle = <small>Modify me from <pre>src/services/home.js</pre></small>
+
         return (
             <div>
-                <Home />
+                <Home 
+                    title="You're on Home Route"
+                    subTitle={subTitle}
+                    buttonText="Visit on github" 
+                />
             </div>
         );
     }

@@ -1,13 +1,33 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink
+} from 'reactstrap';
 
 import routes from "../../routes";
 
 class DefaultHeader extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            isOpen: false
+        };
+    }
+
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
 
     handleClick(e, path) {
         e.preventDefault();
@@ -19,23 +39,30 @@ class DefaultHeader extends Component {
 
     render() {
         return (
-            <div>
-                <h1>{this.props.title ? this.props.title : 'DefaultHeader'}</h1>
-                <br />
-                <ul>{routes.map((v, k) => {
-                    return v.inHeader ? 
-                    (
-                        <li key={k}>
-                            <a 
-                                href={v.path} 
-                                onClick={(e) => this.handleClick(e, v.path)}
-                            >
-                                {v.name}
-                            </a>
-                        </li>
-                    ) : (null);
-                })}</ul>
-            </div>
+            <Navbar color="inverse" light expand="md">
+                <NavbarBrand 
+                    href="/" 
+                    onClick={(e) => this.handleClick(e, '/')}
+                >
+                    {this.props.title ? this.props.title : 'Application Navbar'}
+                </NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                    <Nav className="ml-auto" navbar>
+                        {routes.map((v, k) => {
+                            return v.inHeader ? (
+                                <NavItem key={k}>
+                                    <NavLink href={v.path}
+                                        onClick={(e) => this.handleClick(e, v.path)}
+                                    >
+                                        {v.name}
+                                    </NavLink>
+                                </NavItem>
+                            ) : (null);
+                        })}
+                    </Nav>
+                </Collapse>
+            </Navbar>
         );
     }
 }
