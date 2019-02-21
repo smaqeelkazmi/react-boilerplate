@@ -3,10 +3,7 @@
 ReactJS Starter Kit provides you easy way of getting into work with ReactJS
 instead of struggling with setting up directory structures,
 It also comes up some basic usable ReactJS packages like
-`redux`, `react-redux`, `axios`, `loadable` etc.
-
-Contribute to provide better application structural design
-to make app more scalable and efficient for developers.
+[redux](https://redux.js.org/basics/usage-with-react), [axios](https://www.npmjs.com/package/axios), [loadable](https://github.com/jamiebuilds/react-loadable), [reactstrap](https://reactstrap.github.io/) etc.
 
 ### Directory Structure
 
